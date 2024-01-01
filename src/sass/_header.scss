@@ -1,0 +1,68 @@
+///////////// MEDIA QUERIES
+@media screen and (max-width: 400px) {
+
+    .container {
+        // background-color: blue;
+        width: 100%;
+        height: min-content;
+    
+        &__box {
+            width: 17rem;
+            width: 16rem;
+            width: 19rem;
+            // height: 35rem;
+            height: min-content;
+            margin: 0;
+            margin-top: 0rem;
+            border-radius: 0px;
+            // padding: 10px;
+            
+            display: flex;
+            flex-direction: column;
+    
+            &---minibox1 {
+                border-radius: 0px;
+                border-bottom-left-radius:15px;
+                border-bottom-right-radius:15px;
+
+                &--info {
+    
+                    &-time {
+                             
+                    }
+                    &-date {
+                        
+                    }
+                }
+                &--change {
+                   
+                    &-light {
+                    
+                    }
+                    &-dark {
+                    
+                    }
+                }
+                &--solution {
+    
+                    &-history {
+                       
+                    }
+                    &-number {
+                        
+                    }
+                }
+            }
+    
+            &---minibox2 {
+              
+    
+                &--button {
+                  
+                }
+            }
+        }
+    }
+    
+    
+}
