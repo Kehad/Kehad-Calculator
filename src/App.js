@@ -1,4 +1,3 @@
-import './App.css';
 import CalcMain from './components';
 import './sass/_component.scss';
 import './sass/_header.scss';

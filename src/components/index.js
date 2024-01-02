@@ -6,6 +6,7 @@ const CalcMain = () => {
   // check user story no10
   const [formula, setFormular] = useState('');
   const [display, setDisplay] = useState(0);
+  const [theme, setTheme] = useState();
   const handlerFormular = (event) => {
     event.preventDefault();
     const newValue = event.target.value;
@@ -37,13 +38,26 @@ const CalcMain = () => {
 
   const themeHandler = (props) => {
     console.log(props);
+    setTheme(props);
   };
 
+  // styles
+  const miniboxDarkStyle = {
+    backgroundColor: '#000',
+    color: '#fff',
+  };
+  const miniboxLightStyle = {
+    backgroundColor: '#fff',
+    color: '#000',
+  };
   return (
     <>
       <section className="container">
         <div className="container__box">
-          <div className="container__box---minibox1">
+          <div
+            className="container__box---minibox1"
+            style={theme ? miniboxDarkStyle : miniboxLightStyle}
+          >
             <CalcInfo />
             <CalcTheme themeSet={themeHandler} />
             <div className="container__box---minibox1--solution">

@@ -10,19 +10,19 @@ const CalcTheme = (props) => {
     setTheme((theme) => !theme);
     themeSet(theme);
   };
-  const handlerLightTheme = (event) => {
-    event.preventDefault();
-    setTheme((theme) => !theme);
-    themeSet(theme);
-  };
-  const operatorDarkStyles = {
-    backgroundColor: '#373535',
-    color: '#fff',
-  };
-  const operatorLightStyles = {
-    backgroundColor: '#fff',
-    color: '#000',
-  };
+  // const handlerLightTheme = (event) => {
+  //   event.preventDefault();
+  //   setTheme((theme) => !theme);
+  //   themeSet(theme);
+  // };
+  // const operatorDarkStyles = {
+  //   backgroundColor: '#373535',
+  //   color: '#fff',
+  // };
+  // const operatorLightStyles = {
+  //   backgroundColor: '#fff',
+  //   color: '#000',
+  // };
   return (
     <>
       <div
