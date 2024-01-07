@@ -18,12 +18,14 @@ const CalcMain = () => {
     // setFormular((prevState) => prevState + sanitizedText);
     if (
       !(formula === '0' && newValue === '0') &&
-      !(formula.endsWith('0') && newValue === '0')
+      !(formula.endsWith(0) && newValue === '0')
     ) {
+      // if (formula.length === 0) throw new Error('Error');
       setFormular((prevState) => {
         return prevState + newValue;
       });
     }
+
     console.log(formula);
   };
   const solveFormula = () => {
@@ -35,6 +37,8 @@ const CalcMain = () => {
     setDisplay(0);
     setFormular('');
   };
+
+  const reloadHandler = () => {};
 
   const themeHandler = (props) => {
     console.log(props);
@@ -129,12 +133,15 @@ const CalcMain = () => {
             >
               @
             </div>
-            <div
+            <button
               className={`container__box---minibox2--button ac-green`}
               style={theme ? minibox2SymbolDarkStyle : minibox2SymbolLightStyle}
+              id="remainder"
+              value="%"
+              onClick={handlerFormular}
             >
               %
-            </div>
+            </button>
             <button
               className={`container__box---minibox2--button ac-green`}
               style={theme ? minibox2SymbolDarkStyle : minibox2SymbolLightStyle}
@@ -258,11 +265,11 @@ const CalcMain = () => {
             {/* <br /> */}
             {/* for reloading the page */}
             {/* downloading the reloading and replace it with the & symbol */}
-            <button
+            <div
               className="container__box---minibox2--button"
               id="&" // for
-              value=" "
-              onClick={handlerFormular}
+              value="reload"
+              onClick={reloadHandler}
               style={theme ? minibox2DarkStyle : minibox2LightStyle}
             >
               <svg
@@ -272,9 +279,9 @@ const CalcMain = () => {
                 version="1.1"
                 id="Capa_1"
                 xmlns="http://www.w3.org/2000/svg"
-                xmlnsxlink="http://www.w3.org/1999/xlink"
+                xmlnsXlink="http://www.w3.org/1999/xlink"
                 viewBox="0 0 489.533 489.533"
-                xmlspace="preserve"
+                xmlSpace="preserve"
                 stroke={theme ? '#fff' : '#000'}
                 style={theme ? minibox2DarkStyle : minibox2LightStyle}
               >
@@ -292,7 +299,7 @@ const CalcMain = () => {
                   </g>{' '}
                 </g>
               </svg>
-            </button>
+            </div>
             <button
               className="container__box---minibox2--button"
               style={theme ? minibox2DarkStyle : minibox2LightStyle}
