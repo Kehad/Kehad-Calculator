@@ -28,6 +28,13 @@ const CalcMain = () => {
 
     console.log(formula);
   };
+
+  const deleteTextHandler = () => {
+    setFormular((prevState) => {
+      return prevState.slice(0, -1);
+    });
+  };
+
   const solveFormula = () => {
     const solution = eval(formula);
     console.log(solution);
@@ -38,7 +45,9 @@ const CalcMain = () => {
     setFormular('');
   };
 
-  const reloadHandler = () => {};
+  const reloadHandler = () => {
+    window.location.reload();
+  };
 
   const themeHandler = (props) => {
     console.log(props);
@@ -131,7 +140,31 @@ const CalcMain = () => {
               className={`container__box---minibox2--button ac-green`}
               style={theme ? minibox2SymbolDarkStyle : minibox2SymbolLightStyle}
             >
-              @
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+                width="2.1rem"
+                height="2.1rem"
+                onClick={deleteTextHandler}
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  {' '}
+                  <path
+                    d="M11 10L15 14M11 14L15 10M2.7716 13.5185L7.43827 17.5185C7.80075 17.8292 8.26243 18 8.73985 18H18C19.1046 18 20 17.1046 20 16V8C20 6.89543 19.1046 6 18 6H8.73985C8.26243 6 7.80075 6.17078 7.43827 6.48149L2.7716 10.4815C1.84038 11.2797 1.84038 12.7203 2.7716 13.5185Z"
+                    stroke={theme ? '#C3A03A' : '#44c14f'}
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>{' '}
+                </g>
+              </svg>
             </div>
             <button
               className={`container__box---minibox2--button ac-green`}
