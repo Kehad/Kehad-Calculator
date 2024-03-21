@@ -39,7 +39,10 @@ const CalcTheme = (props) => {
         // style={theme ? operatorLightStyles : operatorDarkStyles}
       >
         {!theme ? (
-          <div className="container__box---minibox1--change-light">
+          <div
+            className="container__box---minibox1--change-light"
+            title="dark mode"
+          >
             {/* FOR LIGHT MODE */}
             <svg
               fill="#fff"
@@ -63,7 +66,10 @@ const CalcTheme = (props) => {
             </svg>
           </div>
         ) : (
-          <div className="container__box---minibox1--change-dark">
+          <div
+            className="container__box---minibox1--change-dark"
+            title="light mode"
+          >
             {/* FOR DARK MODE */}
             <svg
               viewBox="0 0 24 24"

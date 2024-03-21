@@ -303,7 +303,8 @@ const CalcMain = () => {
               id="&" // for
               value="reload"
               onClick={reloadHandler}
-              style={theme ? minibox2DarkStyle : minibox2LightStyle}
+              title="refresh"
+              // style={theme ? minibox2DarkStyle : minibox2LightStyle}
             >
               <svg
                 fill={theme ? '#fff' : '#000'}
