@@ -1,3 +1,5 @@
+// Not in use
+
 const CalcBody = () => {
   return (
     <>
@@ -72,6 +74,13 @@ const CalcBody = () => {
           =
         </div>
       </div>
+
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae
+        temporibus nesciunt sapiente itaque fugiat, sed eum qui iure commodi.
+        Eius illum iste necessitatibus consequatur animi eaque atque consectetur
+        assumenda facere!
+      </p>
     </>
   );
 };

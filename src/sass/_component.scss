@@ -31,6 +31,9 @@ $darkmode-bkg-color: rgba(29, 28, 28, 0.986);
   justify-content: center;
   height: 100vh;
 
+  flex-direction: column;
+  justify-content: space-around;
+
   &__box {
     // background-color: #fff;
     width: 17rem;
@@ -47,7 +50,10 @@ $darkmode-bkg-color: rgba(29, 28, 28, 0.986);
     flex-direction: column;
 
     &---minibox1 {
-      height: 40%;
+      // if you add height then add overflow
+      // height: 40%;
+      // overflow: scroll;
+
       background-color: #fff;
       border-radius: 25px;
       border-bottom-left-radius: 15px;
@@ -60,7 +66,6 @@ $darkmode-bkg-color: rgba(29, 28, 28, 0.986);
       justify-content: space-between;
       box-shadow: 0.1px 1px black;
       border-bottom: 1px solid #000;
-      overflow: scroll;
 
       &--info {
         display: flex;

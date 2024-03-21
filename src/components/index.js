@@ -38,6 +38,7 @@ const CalcMain = () => {
   const solveFormula = () => {
     const solution = eval(formula);
     console.log(solution);
+
     setDisplay(solution);
   };
   const resetFormula = () => {
@@ -304,7 +305,7 @@ const CalcMain = () => {
               value="reload"
               onClick={reloadHandler}
               title="refresh"
-              // style={theme ? minibox2DarkStyle : minibox2LightStyle}
+              style={theme ? minibox2DarkStyle : minibox2LightStyle}
             >
               <svg
                 fill={theme ? '#fff' : '#000'}
@@ -316,8 +317,8 @@ const CalcMain = () => {
                 xmlnsXlink="http://www.w3.org/1999/xlink"
                 viewBox="0 0 489.533 489.533"
                 xmlSpace="preserve"
-                stroke={theme ? '#fff' : '#000'}
-                style={theme ? minibox2DarkStyle : minibox2LightStyle}
+                // stroke={theme ? '#fff' : '#000'}
+                // style={theme ? minibox2DarkStyle : minibox2LightStyle}
               >
                 <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
                 <g
@@ -362,6 +363,18 @@ const CalcMain = () => {
               =
             </button>
           </div>
+        </div>
+        <div>
+          {' '}
+          by{' '}
+          <a
+            id="profile"
+            href="https://www.linkedin.com/in/kehinde-adigun-/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            @Kehad
+          </a>
         </div>
       </section>
     </>
